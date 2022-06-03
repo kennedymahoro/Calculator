@@ -8,14 +8,26 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: honeydew;
 }
 .content-grid{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,10vw);
+    gap: .4vw;
 }
 .display-output{
     grid-column: 1 / span 4 ;
+    height: 14vh;
+    background-color: black;
+    color: white;
 }
 .clear-btn{
     grid-column: 3 / span 2;
+}
+button{
+    height: 14vh;
+    background-color: white;
+    color:hsl(180, 83%, 33%);
+    border-style: none;
+
 }
