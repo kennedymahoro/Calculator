@@ -8,26 +8,37 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: hsl(120, 79%, 36%);
+    background-color: white;
 }
 .content-grid{
     display: grid;
     grid-template-columns: repeat(4,10vw);
-    gap: .4vw;
+    gap: .1px;
 }
 .display-output{
     grid-column: 1 / span 4 ;
     height: 14vh;
     background-color: black;
     color: white;
+    font-size: 4vw;
+    padding-top: 14px;
+    padding-left: 14px;
 }
 .clear-btn{
     grid-column: 3 / span 2;
+    background-color: #ffde59;
+}
+.clear-btn:hover{
+
+    color: #582c85;;
 }
 button{
     height: 8vw;
-    background-color: white;
-    color:hsl(180, 83%, 33%);
+    background-color: #582c85;
+    color: white;
     border-style: none;
-
+    font-size: 2vw;
+}
+button:hover{
+    color: #ffde59;
 }
