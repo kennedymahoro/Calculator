@@ -13,7 +13,6 @@ body{
 .content-grid{
     display: grid;
     grid-template-columns: repeat(4,10vw);
-    gap: .1px;
 }
 .display-output{
     grid-column: 1 / span 4 ;
