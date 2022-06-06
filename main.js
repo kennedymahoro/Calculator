@@ -20,26 +20,26 @@ const subtraction_Symbol = operators[1].innerText;
 const multiplication_Symbol = operators[2].innerText;
 const divition_Symbol = operators[3].innerText;
 
-
+/*
 function inputs(Number,Operator){
-    if(isOperator == false && Number != null){
+    if(!isOperator){
         ArrayofNumbers1.push(Number);
         AllOutput.push(Number)
         alert("Working")
     }
-    if(isOperator == true && Number != null){
+    else{
         ArrayofNumbers2.push(Number)
         AllOutput.push(Number)
         alert("Working")
     }
-    if(Operator != null){
+    if(isOperator == true && Operator != null){
         AllOutput.push(Operator)
         alert("Working")
     }
     return AllOutput.join('');
 }
 
-
+*/
 
 
 
@@ -51,8 +51,8 @@ numbers.forEach(number => {
 })
 operators.forEach(operator => {
     operator.addEventListener('click', ()=>{
-        displayOutput.innerHTML =  inputs(null,operator.innerText);
         isOperator = true;
+        displayOutput.innerHTML =  inputs(null,operator.innerText);
     })
 })
 clearBtn.addEventListener('click', ()=>{
