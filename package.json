@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "making a calculator",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennedymahoro/Calculator.git"
+  },
+  "author": "kennedymahoro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennedymahoro/Calculator/issues"
+  },
+  "homepage": "https://github.com/kennedymahoro/Calculator#readme"
+}
