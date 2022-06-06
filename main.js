@@ -10,9 +10,6 @@ const equalsBtn = document.querySelector("[data-equals]")
 let AllOutput = [];
 let ArrayOfOutputNum = [];// array of outputed numbers
 let Pre_OutputNum;// previous output number
-let ArrayofNumbers1;
-let ArrayofNumbers2;
-let isOperator = false;// if there is an operator fun inputs
 
 // operator symbol
 const Addition_Symbol = operators[0].innerText;
@@ -20,45 +17,24 @@ const subtraction_Symbol = operators[1].innerText;
 const multiplication_Symbol = operators[2].innerText;
 const divition_Symbol = operators[3].innerText;
 
-/*
-function inputs(Number,Operator){
-    if(!isOperator){
-        ArrayofNumbers1.push(Number);
-        AllOutput.push(Number)
-        alert("Working")
-    }
-    else{
-        ArrayofNumbers2.push(Number)
-        AllOutput.push(Number)
-        alert("Working")
-    }
-    if(isOperator == true && Operator != null){
-        AllOutput.push(Operator)
-        alert("Working")
-    }
-    return AllOutput.join('');
-}
-
-*/
-
-
 
 // forEach number
 numbers.forEach(number => {
     number.addEventListener("click", ()=>{
-        displayOutput.innerHTML =  inputs(number.innerText,null);
+        //displayOutput.innerHTML =  inputs(number.innerText,null);
+        AllOutput.push(number.innerText)
+        displayOutput.innerHTML = AllOutput.join('') 
     })
 })
 operators.forEach(operator => {
     operator.addEventListener('click', ()=>{
-        isOperator = true;
-        displayOutput.innerHTML =  inputs(null,operator.innerText);
+        AllOutput.push(operator.innerText)
+        displayOutput.innerHTML = AllOutput.join('') 
     })
 })
 clearBtn.addEventListener('click', ()=>{
     Pre_OutputNum = displayOutput.innerText;
     displayOutput.innerHTML = null;
-    ArrayOfOutputNum = [];
     AllOutput = []
 })
 deleteBtn.addEventListener('click', ()=>{
@@ -66,4 +42,7 @@ deleteBtn.addEventListener('click', ()=>{
     AllOutput.pop()
     displayOutput.innerHTML = AllOutput.join('') 
 
+})
+equalsBtn.addEventListener('click',()=>{
+    let SplitOutputArray = AllOutput.join('').split("")
 })
