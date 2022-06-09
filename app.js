@@ -66,7 +66,6 @@ equalsBtn.addEventListener('click', function () {
     var Current_NUM1 = Number(Number_1.join(''));
     var Current_NUM2 = Number(Number_2.join(''));
     if (Current_Operator == Addition_Symbol) {
-        alert("Yess");
         displayOutput.innerHTML = (Current_NUM1 + Current_NUM2).toString();
     }
     if (Current_Operator == subtraction_Symbol) {
@@ -79,9 +78,10 @@ equalsBtn.addEventListener('click', function () {
         displayOutput.innerHTML = (Current_NUM1 * Current_NUM2).toString();
     }
     Pre_OutputNum = Number(displayOutput.innerText);
-    displayOutput.innerHTML = null;
     AllOutput = [];
     Number_1 = [];
     Number_2 = [];
+    Number_1.push(Number(displayOutput.innerText));
+    AllOutput.push(displayOutput.innerText);
     Is_Operator = false;
 });

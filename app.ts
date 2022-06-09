@@ -26,11 +26,6 @@ const NUM_INPUTS = (num:number):void=>{
 }
 
 
-
-
-
-
-
 // forEach number
 numbers.forEach(number => {
     number.addEventListener("click", ():void=>{
@@ -73,7 +68,6 @@ equalsBtn.addEventListener('click',():void=>{
     let Current_NUM1:number = Number(Number_1.join(''))
     let Current_NUM2:number = Number(Number_2.join(''))
     if(Current_Operator == Addition_Symbol){
-        alert("Yess")
         displayOutput.innerHTML = (Current_NUM1 + Current_NUM2).toString();
     }
     if(Current_Operator == subtraction_Symbol){
@@ -86,9 +80,10 @@ equalsBtn.addEventListener('click',():void=>{
         displayOutput.innerHTML = (Current_NUM1 * Current_NUM2).toString();
     }
     Pre_OutputNum = Number(displayOutput.innerText);
-    displayOutput.innerHTML = null;
     AllOutput = [];
     Number_1 = [];
     Number_2 = [];
+    Number_1.push(Number(displayOutput.innerText))
+    AllOutput.push(displayOutput.innerText)
     Is_Operator = false;
 })
