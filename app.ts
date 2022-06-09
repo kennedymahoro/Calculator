@@ -37,7 +37,6 @@ numbers.forEach(number => {
         AllOutput.push(number.innerText)
         NUM_INPUTS(Number(number.innerText))
         displayOutput.innerHTML = AllOutput.join('') 
-        alert(Current_Operator)
     })
 })
 // forEach operator
@@ -63,11 +62,6 @@ deleteBtn.addEventListener('click', ():void=>{
     Number_1.pop()
     Number_2.pop()
     displayOutput.innerHTML = AllOutput.join('') 
-    for(let i:number = 0;i<operators.length;i++){
-        if(AllOutput.pop() == operators[i].innerText){
-            Is_Operator = false;
-        }
-    }
 })
 percentBtn.addEventListener('click',():void=>{
     AllOutput.push(percentBtn.innerText)
@@ -76,9 +70,10 @@ percentBtn.addEventListener('click',():void=>{
 // equals buttton
 equalsBtn.addEventListener('click',():void=>{
     //Number_1//2
-    let Current_NUM1:number = Number(Number_1.join())
-    let Current_NUM2:number = Number(Number_2.join())
+    let Current_NUM1:number = Number(Number_1.join(''))
+    let Current_NUM2:number = Number(Number_2.join(''))
     if(Current_Operator == Addition_Symbol){
+        alert("Yess")
         displayOutput.innerHTML = (Current_NUM1 + Current_NUM2).toString();
     }
     if(Current_Operator == subtraction_Symbol){

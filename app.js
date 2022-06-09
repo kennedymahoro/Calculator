@@ -30,7 +30,6 @@ numbers.forEach(function (number) {
         AllOutput.push(number.innerText);
         NUM_INPUTS(Number(number.innerText));
         displayOutput.innerHTML = AllOutput.join('');
-        alert(Current_Operator);
     });
 });
 // forEach operator
@@ -56,11 +55,6 @@ deleteBtn.addEventListener('click', function () {
     Number_1.pop();
     Number_2.pop();
     displayOutput.innerHTML = AllOutput.join('');
-    for (var i = 0; i < operators.length; i++) {
-        if (AllOutput.pop() == operators[i].innerText) {
-            Is_Operator = false;
-        }
-    }
 });
 percentBtn.addEventListener('click', function () {
     AllOutput.push(percentBtn.innerText);
@@ -69,9 +63,10 @@ percentBtn.addEventListener('click', function () {
 // equals buttton
 equalsBtn.addEventListener('click', function () {
     //Number_1//2
-    var Current_NUM1 = Number(Number_1.join());
-    var Current_NUM2 = Number(Number_2.join());
+    var Current_NUM1 = Number(Number_1.join(''));
+    var Current_NUM2 = Number(Number_2.join(''));
     if (Current_Operator == Addition_Symbol) {
+        alert("Yess");
         displayOutput.innerHTML = (Current_NUM1 + Current_NUM2).toString();
     }
     if (Current_Operator == subtraction_Symbol) {
