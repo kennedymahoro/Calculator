@@ -23,11 +23,8 @@ body{
     padding-top: 14px;
     padding-left: 14px;
 }
-.clear-btn{
-    grid-column: 1 / span 2;
-}
-.equals-btn{
-    grid-column: 3 / span 2;
+.span-2{
+    grid-column: span 2;
 }
 button{
     cursor: pointer;
