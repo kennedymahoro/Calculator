@@ -7,7 +7,6 @@ var clearBtn = document.querySelector("[data-clear]");
 var equalsBtn = document.querySelector("[data-equals]");
 // variables
 var AllOutput = [];
-var Pre_OutputNum; // previous output number
 var Number_1 = [];
 var Number_2 = [];
 var Current_Operator;
@@ -72,7 +71,6 @@ equalsBtn.addEventListener('click', function () {
     if (Current_Operator == multiplication_Symbol) {
         displayOutput.innerHTML = (Current_NUM1 * Current_NUM2).toString();
     }
-    Pre_OutputNum = Number(displayOutput.innerText);
     AllOutput = [];
     Number_1 = [];
     Number_2 = [];

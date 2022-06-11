@@ -7,7 +7,6 @@ const clearBtn:HTMLButtonElement= document.querySelector("[data-clear]") as HTML
 const equalsBtn:HTMLButtonElement = document.querySelector("[data-equals]") as HTMLButtonElement;
 // variables
 let AllOutput:any = [];
-let Pre_OutputNum:number;// previous output number
 let Number_1:number[] = [];
 let Number_2:number[] = [];
 let Current_Operator:string;
@@ -74,7 +73,6 @@ equalsBtn.addEventListener('click',():void=>{
     if(Current_Operator == multiplication_Symbol){
         displayOutput.innerHTML = (Current_NUM1 * Current_NUM2).toString();
     }
-    Pre_OutputNum = Number(displayOutput.innerText);
     AllOutput = [];
     Number_1 = [];
     Number_2 = [];
