@@ -1,11 +1,10 @@
 // query selectors
-const numbers:NodeListOf<HTMLButtonElement> = document.querySelectorAll("[data-number]")
-const displayOutput:HTMLDivElement = document.querySelector("[data-display-output]")
-const operators:NodeListOf<HTMLButtonElement> = document.querySelectorAll("[data-operator]")
-const deleteBtn:HTMLButtonElement = document.querySelector("[data-delete]")
-const clearBtn:HTMLButtonElement= document.querySelector("[data-clear]")
-const percentBtn:HTMLButtonElement = document.querySelector("[data-percent]")
-const equalsBtn:HTMLButtonElement = document.querySelector("[data-equals]")
+const numbers:NodeListOf<HTMLButtonElement> = document.querySelectorAll("[data-number]") as NodeListOf<HTMLButtonElement>;
+const displayOutput:HTMLDivElement = document.querySelector("[data-display-output]") as HTMLDivElement;
+const operators:NodeListOf<HTMLButtonElement> = document.querySelectorAll("[data-operator]") as NodeListOf<HTMLButtonElement>;
+const deleteBtn:HTMLButtonElement = document.querySelector("[data-delete]") as HTMLButtonElement;
+const clearBtn:HTMLButtonElement= document.querySelector("[data-clear]") as HTMLButtonElement;
+const equalsBtn:HTMLButtonElement = document.querySelector("[data-equals]") as HTMLButtonElement;
 // variables
 let AllOutput:any = [];
 let Pre_OutputNum:number;// previous output number
@@ -45,7 +44,7 @@ operators.forEach(operator => {
 })
 // clear button
 clearBtn.addEventListener('click', ():void=>{
-    displayOutput.innerHTML = null;
+    displayOutput.innerHTML = '';
     AllOutput = [];
     Number_1 = [];
     Number_2 = [];
@@ -56,10 +55,6 @@ deleteBtn.addEventListener('click', ():void=>{
     AllOutput.pop()
     Number_1.pop()
     Number_2.pop()
-    displayOutput.innerHTML = AllOutput.join('') 
-})
-percentBtn.addEventListener('click',():void=>{
-    AllOutput.push(percentBtn.innerText)
     displayOutput.innerHTML = AllOutput.join('') 
 })
 // equals buttton

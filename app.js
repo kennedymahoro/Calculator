@@ -4,7 +4,6 @@ var displayOutput = document.querySelector("[data-display-output]");
 var operators = document.querySelectorAll("[data-operator]");
 var deleteBtn = document.querySelector("[data-delete]");
 var clearBtn = document.querySelector("[data-clear]");
-var percentBtn = document.querySelector("[data-percent]");
 var equalsBtn = document.querySelector("[data-equals]");
 // variables
 var AllOutput = [];
@@ -43,7 +42,7 @@ operators.forEach(function (operator) {
 });
 // clear button
 clearBtn.addEventListener('click', function () {
-    displayOutput.innerHTML = null;
+    displayOutput.innerHTML = '';
     AllOutput = [];
     Number_1 = [];
     Number_2 = [];
@@ -54,10 +53,6 @@ deleteBtn.addEventListener('click', function () {
     AllOutput.pop();
     Number_1.pop();
     Number_2.pop();
-    displayOutput.innerHTML = AllOutput.join('');
-});
-percentBtn.addEventListener('click', function () {
-    AllOutput.push(percentBtn.innerText);
     displayOutput.innerHTML = AllOutput.join('');
 });
 // equals buttton
