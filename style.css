@@ -12,7 +12,7 @@ body{
 }
 .content-grid{
     display: grid;
-    grid-template-columns: repeat(4,10vw);
+    grid-template-columns: repeat(4,8vw);
 }
 .display-output{
     grid-column: 1 / span 4 ;
@@ -24,19 +24,19 @@ body{
     padding-left: 14px;
 }
 .clear-btn{
-    grid-column: 3 / span 2;
-    background-color: #ffde59;
+    grid-column: 1 / span 2;
 }
-.clear-btn:hover{
-
-    color: #582c85;;
+.equals-btn{
+    grid-column: 3 / span 2;
 }
 button{
+    cursor: pointer;
     height: 8vw;
-    background-color: #582c85;
     color: white;
-    border-style: none;
     font-size: 2vw;
+    border: 1px solid white;
+    background-color: cornflowerblue;
+
 }
 button:hover{
     color: #ffde59;
